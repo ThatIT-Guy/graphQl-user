@@ -1,0 +1,17 @@
+type Query{
+    allUser:[User]
+    getUser(id:String):User
+}
+
+type User {
+    id:ID!
+    name:String!
+    email:String!
+    orders:[Order]
+}
+
+type Order {
+    orderId: ID!
+    userId: String!
+    amount: Float!
+}
