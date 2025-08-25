@@ -27,7 +27,6 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    // Nested field resolver for orders
     @SchemaMapping(typeName = "User", field = "orders")
     public List<Order> getOrders(User user) {
         String url = "http://localhost:8080/graphql";
